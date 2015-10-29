@@ -3,7 +3,7 @@ from flask import Flask, render_template
 from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
-
+import json
 
 # create the application object
 app = Flask(__name__)
@@ -24,8 +24,11 @@ def home():
     class listener(StreamListener):
     
         def on_data(self, data):
-            print(data)
-            return(data)
+            
+            decoded = json.loads(data)
+            
+            print '%s    %s' % (decoded['text'].encode('ascii', 'ignore'), decoded['user']['location'])
+            return(True)
     
         def on_error(self, status):
             print status
@@ -34,7 +37,9 @@ def home():
     auth.set_access_token(atoken, asecret)
     
     twitterStream = Stream(auth, listener())
-    twitterStream.filter(track=["trump"])
+    twitterStream.filter(track=['bmw'])
+    
+    return data
 
 
 # start the server with the 'run()' method
