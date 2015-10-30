@@ -1,10 +1,60 @@
- text=u'Arvind Kejriwal to distribute enhanced compensation to families of 1984 riot victims https://t.co/32nyepQJLp https://t.co/CCZfk8Mz0n'
- text=u"---\n---\nSent by WhatsApp letter of Hon'ble Chief Minister of Delhi
- text=u'RT @srivastavaarunk: Arvind Kejriwal
- text=u'Retweeted Arvind Kejriwal (@ArvindKejriwal):\n\nPlease stay calm &amp; do not panic. Disaster management teams have been activated'
- text=u"when we raise finger on kejriwal for wrong work made by his MLA i.e you says PM is wrong as his MP's gives speech."
- text=u'RT @JantaKaReporter: Exclusive- Everyone knows why @asadowaisi has gone to Bihar. His only aim is to help BJP: Azam Khan https://t.co/iGQF6\u2026'
- text=u"RT @India_Policy: Kejriwal has no money to pay Municipalities
- text=u'RT @AAPUPMission: Lower drinking age to 21 years
- text=u'Retweeted Arvind Kejriwal (@ArvindKejriwal):\n\nI appeal to the brothers n sisters of Bihar to vote to make Nitish ji the CM of Bihar'
- text=u'RT @BJPDelhiState: Arvind Kejriwal has urged people to vote for Nitish Kumar. He should clear his stand on JDU minister and MLAs who were c\u2026'
+ text=u'RT @nishachugh1: AAP hits back Azam Khan..Says..AAP will provide new alternative n UP......\n\nhttps://t.co/vuwMc23gXW'
+
+\u0926\u093f\u0932\u094d\u0932\u0940'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @IndiaBTL: While Kejriwal is busy doing everything not related to Delhi or its governance
+
+New Delhi
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @AAPInNews: Arvind Kejriwal to Distribute Enhanced Compensation to Families of 1984 Riot Victims - NDTV - https://t.co/fUuzccCwn8\n#Delhi\u2026'
+
+lucknow'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @AAPInNews: Arvind Kejriwal seeks report on \u2018raid\u2019
+
+lucknow'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @ndtv: Arvind Kejriwal to distribute enhanced compensation to families of 1984 riot victims https://t.co/32nyepQJLp https://t.co/CCZfk8M\u2026'
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @AAPInNews: Arvind Kejriwal to Distribute Enhanced Compensation to Families of 1984 Riot Victims - NDTV - https://t.co/fUuzccCwn8\n#Delhi\u2026'
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT AAPUPMission: Arvind Kejriwal seeks report on \u2018raid\u2019
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @AAPUPMission: Arvind Kejriwal seeks report on \u2018raid\u2019
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u"RT @abhijitmajumder: PM Bhargava got Padma Bhushan from Rajiv govt in 1986. Got National Knowledge Commission post from Sonia-MMS' UPA. Bac\u2026"
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @AAPUPMission: Arvind Kejriwal to Distribute Enhanced Compensation to Families of 1984 Riot Victims - NDTV - https://t.co/uxebSztpy3\n#De\u2026'
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @ndtv: Arvind Kejriwal to distribute enhanced compensation to families of 1984 riot victims https://t.co/32nyepQJLp https://t.co/CCZfk8M\u2026'
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'RT @AAPUPMission: Arvind Kejriwal seeks report on \u2018raid\u2019
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'@ashutosh83B curious case of kejriwal taking interest in all states politics except del.Y does he do tht .is it apathy..is it incompetence?'
+
+World'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u'vinit1216: AAP Feeds 1984 anti-Sikh riot: Arvind Kejriwal to distribute enhanced compensation of \u20b95L to victims #D\u2026 https://t.co/xHtd8zKRgV'
+
+'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ text=u"RT @abhijitmajumder: PM Bhargava got Padma Bhushan from Rajiv govt in 1986. Got National Knowledge Commission post from Sonia-MMS' UPA. Bac\u2026"
+
+India'
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

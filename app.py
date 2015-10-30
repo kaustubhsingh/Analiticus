@@ -45,12 +45,23 @@ def home():
     api = tweepy.API(auth)
 
     query = 'kejriwal'
-    max_tweets = 10
+    max_tweets = 15
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
     for tweet in searched_tweets:
         split_result = re.split(r',', str(tweet))
         print split_result[2]
+        print    
+        loc = str(tweet).split("location': u'")
+        loc = loc[1].split(",")
+        print loc[0]
+        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" 
+        
+        #i = 0
+        #for k in split_result:
+        #    print i
+        #    print k
+        #    i = i + 1
 
     
 
