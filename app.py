@@ -5,6 +5,9 @@ from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import json
 
+import tweepy
+import re
+
 # create the application object
 app = Flask(__name__)
 
@@ -21,25 +24,37 @@ def home():
     atoken=credentials[2]
     asecret=credentials[3]
     
-    class listener(StreamListener):
+    #class listener(StreamListener):
     
-        def on_data(self, data):
+    #    def on_data(self, data):
             
-            decoded = json.loads(data)
+    #        decoded = json.loads(data)
             
-            print '%s    %s' % (decoded['text'].encode('ascii', 'ignore'), decoded['user']['location'])
-            return(True)
+    #        print '%s    %s' % (decoded['text'].encode('ascii', 'ignore'), decoded['user']['location'])
+    #        return(True)
     
-        def on_error(self, status):
-            print status
+    #    def on_error(self, status):
+    #        print status
     
     auth = OAuthHandler(ckey, csecret)
     auth.set_access_token(atoken, asecret)
     
-    twitterStream = Stream(auth, listener())
-    twitterStream.filter(track=['bmw'])
+    #twitterStream = Stream(auth, listener())
+    #twitterStream.filter(track=['bmw'])
     
-    return data
+    api = tweepy.API(auth)
+
+    query = 'amica'
+    max_tweets = 10
+    searched_tweets = [status for status in tweepy.Cursor(api.search, q=query).items(max_tweets)]
+
+    for tweet in searched_tweets:
+        split_result = re.split(r',', str(tweet))
+        print split_result[2]
+
+    
+
+    return 
 
 
 # start the server with the 'run()' method
