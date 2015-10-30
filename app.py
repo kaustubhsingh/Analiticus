@@ -44,7 +44,7 @@ def home():
     
     api = tweepy.API(auth)
 
-    query = 'kejriwal'
+    query = 'Hilton Hotels'
     max_tweets = 15
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
@@ -54,6 +54,7 @@ def home():
         print    
         loc = str(tweet).split("location': u'")
         loc = loc[1].split(",")
+        loc = loc[0].split("'")
         print loc[0]
         print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" 
         

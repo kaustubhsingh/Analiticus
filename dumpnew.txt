@@ -1,60 +1,60 @@
- text=u'RT @nishachugh1: AAP hits back Azam Khan..Says..AAP will provide new alternative n UP......\n\nhttps://t.co/vuwMc23gXW'
+ text=u'We\u2019re staying at Hilton Hawaiian Village Waikiki Beach Resort which is one of the resort hotels in #Waikiki. Aloha! https://t.co/xknp4jYnHu'
 
-\u0926\u093f\u0932\u094d\u0932\u0940'
+Tokyo
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @IndiaBTL: While Kejriwal is busy doing everything not related to Delhi or its governance
+ text=u"#Lodging #Travel Marriott's Grande Ocean Hilton Head Resort-Timeshare Rental - January 1-8
 
-New Delhi
+
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @AAPInNews: Arvind Kejriwal to Distribute Enhanced Compensation to Families of 1984 Riot Victims - NDTV - https://t.co/fUuzccCwn8\n#Delhi\u2026'
+ text=u'RT @HiltonWorldwide: .@gabezal spent the evening at the new @HiltonBankside &amp; saw @JessGlynne perform as part of the Hilton@PLAY series htt\u2026'
 
-lucknow'
+
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @AAPInNews: Arvind Kejriwal seeks report on \u2018raid\u2019
+ text=u'RT @CurioCollection: Some images need no description. This one just needs you. https://t.co/IyWrBvNa58 https://t.co/ETSIyMK0ya'
 
-lucknow'
+
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @ndtv: Arvind Kejriwal to distribute enhanced compensation to families of 1984 riot victims https://t.co/32nyepQJLp https://t.co/CCZfk8M\u2026'
+ text=u'.@gabezal spent the evening at the new @HiltonBankside &amp; saw @JessGlynne perform as part of the Hilton@PLAY series https://t.co/IfA8lEts6H'
 
-'
+McLean
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @AAPInNews: Arvind Kejriwal to Distribute Enhanced Compensation to Families of 1984 Riot Victims - NDTV - https://t.co/fUuzccCwn8\n#Delhi\u2026'
+ text=u'#Sales #Executive (2 - 7 yrs) needed in #Jaipur at Hilton Hotels &amp; Resorts. Apply now! #jobs https://t.co/ghsXjS3Je6'
 
-'
+Jaipur
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT AAPUPMission: Arvind Kejriwal seeks report on \u2018raid\u2019
+ text=u'More than 4
 
-'
+New york city 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @AAPUPMission: Arvind Kejriwal seeks report on \u2018raid\u2019
+ text=u'Hilton Hotels and Resorts is hiring! #Cook #III - Garde Manger - Washington Hilton in #Washington
 
-'
+Washington
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u"RT @abhijitmajumder: PM Bhargava got Padma Bhushan from Rajiv govt in 1986. Got National Knowledge Commission post from Sonia-MMS' UPA. Bac\u2026"
+ text=u'RT @healthysaurus: Hilton Announces #ElectricCar Charging Program For U.S.
 
-'
+Sundance Chevy-Lansing
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @AAPUPMission: Arvind Kejriwal to Distribute Enhanced Compensation to Families of 1984 Riot Victims - NDTV - https://t.co/uxebSztpy3\n#De\u2026'
+ text=u'Triple your points on weekend bookings at Hilton Hotels &amp; Resorts \n#HiltonHotels #Hoteldeals\nhttps://t.co/aCrPgY5XYZ https://t.co/xmTfOI1yfU'
 
-'
+Verenigde Staten
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @ndtv: Arvind Kejriwal to distribute enhanced compensation to families of 1984 riot victims https://t.co/32nyepQJLp https://t.co/CCZfk8M\u2026'
+ text=u'Hilton Hotel Blackpool is one of the best budget #hotels in whole #UnitedKingdom! https://t.co/7ROCHrVnr1 #asterix'
 
-'
+Hotels around the world
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'RT @AAPUPMission: Arvind Kejriwal seeks report on \u2018raid\u2019
+ text=u'Hampton Inn &amp; Suites by Hilton Opens New Hotel in Chicago - https://t.co/rfEzaLaPeg #hotels #hospitality'
 
-'
+Albuquerque
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'@ashutosh83B curious case of kejriwal taking interest in all states politics except del.Y does he do tht .is it apathy..is it incompetence?'
+ text=u'Apply now to work for Hilton Hotels &amp; Resorts as #Conference #and Events Sales Manager (2 - 7 yrs) in #Mumbai #jobs https://t.co/RHlfPWk7qH'
 
-World'
+Mumbai
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u'vinit1216: AAP Feeds 1984 anti-Sikh riot: Arvind Kejriwal to distribute enhanced compensation of \u20b95L to victims #D\u2026 https://t.co/xHtd8zKRgV'
+ text=u"@Choose2Live unless you're my coworker who spends 300 days a year at hotels (all Hilton)"
 
-'
+NJ
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- text=u"RT @abhijitmajumder: PM Bhargava got Padma Bhushan from Rajiv govt in 1986. Got National Knowledge Commission post from Sonia-MMS' UPA. Bac\u2026"
+ text=u'We have on-site facilities and services ideally suited for your groups
 
-India'
+
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
