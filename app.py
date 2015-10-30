@@ -44,9 +44,9 @@ def home():
     
     api = tweepy.API(auth)
 
-    query = 'amica'
+    query = 'kejriwal'
     max_tweets = 10
-    searched_tweets = [status for status in tweepy.Cursor(api.search, q=query).items(max_tweets)]
+    searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
     for tweet in searched_tweets:
         split_result = re.split(r',', str(tweet))
