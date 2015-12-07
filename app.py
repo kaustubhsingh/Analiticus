@@ -12,13 +12,14 @@ from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['SQLALCHEMY_DATABASE_URI']
+
 db = SQLAlchemy(app)
 
 # use decorators to link the function to a url
 @app.route('/')
 def home():
-    # return "Hello! Welcome to Analiticus" 
+    # "Hello! Welcome to Analiticus" 
 
     with open('oauth.txt') as f:
         credentials = [x.strip() for x in f.readlines()]
@@ -48,7 +49,8 @@ def home():
     
     api = tweepy.API(auth)
 
-    query = 'Hilton Hotels'
+    
+    query = 'california'
     max_tweets = 15
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
