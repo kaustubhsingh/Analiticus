@@ -7,15 +7,18 @@ import json
 
 import tweepy
 import re
-
 import os
+import sqlite3
+from flask import g
+
 
 app = Flask(__name__)
 
-# use decorators to link the function to a url
 @app.route('/')
 def home():
-    # "Hello! Welcome to Analiticus" 
+
+    g.db = sqlite3.connect("tweets.db")
+    g.db.execute("CREATE TABLE tweets ( tweet TEXT );")
 
     with open('oauth.txt') as f:
         credentials = [x.strip() for x in f.readlines()]
@@ -60,13 +63,11 @@ def home():
         print loc[0]
         print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" 
         
-        #i = 0
-        #for k in split_result:
-        #    print i
-        #    print k
-        #    i = i + 1
+        g.db.execute("INSERT INTO tweets VALUES (?)", [split_result[2]])
+        g.db.commit()
 
-    
+    if hasattr(g, 'db'):
+        g.db.close()
 
     return 
 
