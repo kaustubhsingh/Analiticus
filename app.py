@@ -18,6 +18,8 @@ app = Flask(__name__)
 def home():
 
     g.db = sqlite3.connect("tweets.db")
+
+    g.db.execute("DROP TABLE IF EXISTS tweets")
     g.db.execute("CREATE TABLE tweets ( tweet TEXT );")
 
     with open('oauth.txt') as f:
@@ -28,27 +30,11 @@ def home():
     atoken=credentials[2]
     asecret=credentials[3]
     
-    #class listener(StreamListener):
-    
-    #    def on_data(self, data):
-            
-    #        decoded = json.loads(data)
-            
-    #        print '%s    %s' % (decoded['text'].encode('ascii', 'ignore'), decoded['user']['location'])
-    #        return(True)
-    
-    #    def on_error(self, status):
-    #        print status
-    
     auth = OAuthHandler(ckey, csecret)
     auth.set_access_token(atoken, asecret)
     
-    #twitterStream = Stream(auth, listener())
-    #twitterStream.filter(track=['bmw'])
-    
     api = tweepy.API(auth)
 
-    
     query = 'california'
     max_tweets = 15
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
@@ -66,12 +52,11 @@ def home():
         g.db.execute("INSERT INTO tweets VALUES (?)", [split_result[2]])
         g.db.commit()
 
+
     if hasattr(g, 'db'):
         g.db.close()
 
     return 
 
-
-# start the server with the 'run()' method
 if __name__ == '__main__':
     app.run(debug=True)
