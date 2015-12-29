@@ -20,7 +20,7 @@ def home():
     g.db = sqlite3.connect("tweets.db")
 
     g.db.execute("DROP TABLE IF EXISTS tweets")
-    g.db.execute("CREATE TABLE tweets ( tweet TEXT );")
+    g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
 
     with open('oauth.txt') as f:
         credentials = [x.strip() for x in f.readlines()]
@@ -36,20 +36,18 @@ def home():
     api = tweepy.API(auth)
 
     query = 'california'
-    max_tweets = 15
+    max_tweets = 500
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
-    for tweet in searched_tweets:
-        split_result = re.split(r',', str(tweet))
-        print split_result[2]
-        print    
-        loc = str(tweet).split("location': u'")
-        loc = loc[1].split(",")
-        loc = loc[0].split("'")
-        print loc[0]
-        print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" 
+    l = dir(searched_tweets[0].user)
+    print l
         
-        g.db.execute("INSERT INTO tweets VALUES (?)", [split_result[2]])
+    for tweet in searched_tweets:
+              
+        print tweet.text.encode('utf-8')
+        print tweet.user.location.encode('utf-8')
+            
+        g.db.execute("INSERT INTO tweets VALUES (?, ?)", [tweet.text, tweet.user.location])      
         g.db.commit()
 
 
