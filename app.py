@@ -8,13 +8,9 @@ import json
 import tweepy
 import re
 
-from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['SQLALCHEMY_DATABASE_URI']
-
-db = SQLAlchemy(app)
 
 # use decorators to link the function to a url
 @app.route('/')
