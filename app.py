@@ -23,12 +23,13 @@ def home():
         # get keyword that the user has entered
         keyword = request.form['keyword']
         
-        return render_template('index.html', tweets=keyword)
-        
+       
         g.db = sqlite3.connect("tweets.db")
     
         g.db.execute("DROP TABLE IF EXISTS tweets")
         g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
+
+        return render_template('index.html', tweets=keyword)
     
         with open('oauth.txt') as f:
             credentials = [x.strip() for x in f.readlines()]
