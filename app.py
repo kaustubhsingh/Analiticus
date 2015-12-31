@@ -29,8 +29,7 @@ def home():
         g.db.execute("DROP TABLE IF EXISTS tweets")
         g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
 
-        return render_template('index.html', tweets=keyword)
-    
+
         with open('oauth.txt') as f:
             credentials = [x.strip() for x in f.readlines()]
     
@@ -62,7 +61,7 @@ def home():
     
         if hasattr(g, 'db'):
             g.db.close()
-
+        return render_template('index.html', tweets=keyword)
     return render_template('index.html', tweets=tweet_list)
 
 
