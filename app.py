@@ -46,10 +46,9 @@ def home():
         query = keyword
         max_tweets = 50
         searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
-    
-        l = dir(searched_tweets[0].user)
-        print l
-            
+
+        return render_template('index.html', tweets=keyword)
+        
         for tweet in searched_tweets:      
             print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
@@ -61,7 +60,7 @@ def home():
     
         if hasattr(g, 'db'):
             g.db.close()
-        return render_template('index.html', tweets=keyword)
+
     return render_template('index.html', tweets=tweet_list)
 
 
