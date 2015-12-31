@@ -37,12 +37,13 @@ def home():
         csecret=credentials[1]
         atoken=credentials[2]
         asecret=credentials[3]
-        
-        auth = OAuthHandler(ckey, csecret)
-        auth.set_access_token(atoken, asecret)
 
         return render_template('index.html', tweets=keyword)
     
+        auth = OAuthHandler(ckey, csecret)
+        auth.set_access_token(atoken, asecret)
+
+   
         api = tweepy.API(auth)
   
         query = keyword
