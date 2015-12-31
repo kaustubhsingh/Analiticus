@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Justified Nav Template for Bootstrap</title>
+    <title>TwitXp</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -27,13 +27,10 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
-        <h3 class="text-muted">Twitxp</h3>
+        <h3 class="text-muted">TwitXp</h3>
         <nav>
           <ul class="nav nav-justified">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Downloads</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -43,24 +40,32 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>Twitter Sentiment Analyzer!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+        <p class="lead"></p>
       </div>
 
-
+    <div>
       <form role="form" method='POST' action='/'>
-        <div class="form-group">
-          <input type="text" name="keyword" class="form-control" id="keyword"
-                 placeholder="Enter keyword..." style="max-width: 300px;">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <div class="form-group" class="row">
+            <div class="col-sm-offset-3 col-sm-6">
+                <input type="text" name="keyword" class="form-control" id="keyword"
+                   placeholder="Enter keyword...">
+            </div>
+        </div><br><br><br><br>
+        <div class="form-group" class="row">
+            <div class="col-sm-offset-3 col-sm-6">                     
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>                
       </form>
-      <br>
+    </div>
+      <br><br>
       
-    <div>   
-      {% for tweet in tweets %}
-        <h4>{{ tweet }}</h4>
-      {% endfor %}
+    <div>
+        <ul>
+            {% for tweet in tweets %}
+                <li>{{ tweet }}</li>
+            {% endfor %}
+        </ul>
     </div>
 
 
