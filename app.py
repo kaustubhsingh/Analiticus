@@ -28,16 +28,20 @@ def home():
     
         g.db.execute("DROP TABLE IF EXISTS tweets")
         g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
-
-        return render_template('index.html', tweets=keyword)
-    
+ 
         with open('oauth.txt') as f:
             credentials = [x.strip() for x in f.readlines()]
-    
-        ckey=credentials[0]
-        csecret=credentials[1]
-        atoken=credentials[2]
-        asecret=credentials[3]
+  
+        '''
+        ckey   = credentials[0] || ENV['ckey']
+        csecret= credentials[1] || ENV['csecret']
+        atoken = credentials[2] || ENV['atoken']
+        asecret= credentials[3] || ENV['asecret']   '''
+
+        ckey   = os.environ['ckey']
+        csecret= os.environ['csecret']
+        atoken = os.environ['atoken']
+        asecret= os.environ['asecret']
    
         auth = OAuthHandler(ckey, csecret)
         auth.set_access_token(atoken, asecret)
