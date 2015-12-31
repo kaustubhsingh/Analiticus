@@ -42,13 +42,13 @@ def home():
         auth.set_access_token(atoken, asecret)
         
         api = tweepy.API(auth)
+
+        return render_template('index.html', tweets=keyword)
     
         query = keyword
         max_tweets = 50
         searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
-
-        return render_template('index.html', tweets=keyword)
-        
+      
         for tweet in searched_tweets:      
             print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
