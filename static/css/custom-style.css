@@ -1,19 +1,20 @@
 /* Main marketing message and sign up button */
 .jumbotron {
-  background-color: #b3c2bf;
+  color: #b56969;
 }
 
 /* Customize the nav-justified links to be fill the entire space of the .navbar */
 
-.nav-justified {
-  background-color: #eee;
+.nav .nav-justified {
+  background-color: #b56969;
 }
 .nav-justified > li > a {
   color: #777;
-   background-color: #e5e5e5; /* Old browsers */
+   background-color: #b56969; /* Old browsers */
 }
 .nav-justified > .active > a,
 .nav-justified > .active > a:hover,
 .nav-justified > .active > a:focus {
-  background-color: #ddd;
+  background-color: #red;
 }
+
