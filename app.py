@@ -35,7 +35,7 @@ def home():
     
     api = tweepy.API(auth)
 
-    query = 'california'
+    query = 'trump'
     max_tweets = 500
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
@@ -50,11 +50,11 @@ def home():
         g.db.execute("INSERT INTO tweets VALUES (?, ?)", [tweet.text, tweet.user.location])      
         g.db.commit()
 
-
     if hasattr(g, 'db'):
         g.db.close()
 
-    return 
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
