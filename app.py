@@ -10,8 +10,9 @@ import re
 import os
 import sqlite3
 from flask import g
-import oauth
-
+try:
+    import oauth
+except ImportError:
 
 app = Flask(__name__)
 
@@ -30,16 +31,6 @@ def home():
         g.db.execute("DROP TABLE IF EXISTS tweets")
         g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
  
-        '''
-        with open('oauth.txt') as f:
-            credentials = [x.strip() for x in f.readlines()]
-  
-        
-        ckey   = credentials[0] || ENV['ckey']
-        csecret= credentials[1] || ENV['csecret']
-        atoken = credentials[2] || ENV['atoken']
-        asecret= credentials[3] || ENV['asecret']   '''
-
         ckey   = os.environ['ckey']
         csecret= os.environ['csecret']
         atoken = os.environ['atoken']
