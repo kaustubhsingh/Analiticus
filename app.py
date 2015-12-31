@@ -36,15 +36,17 @@ def home():
     api = tweepy.API(auth)
 
     query = 'trump'
-    max_tweets = 500
+    max_tweets = 50
     searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
 
     l = dir(searched_tweets[0].user)
     print l
         
-    for tweet in searched_tweets:
-              
+    tweet_list = list()
+    for tweet in searched_tweets:      
         print tweet.text.encode('utf-8')
+        tweet_list.append(tweet.text)
+        
         print tweet.user.location.encode('utf-8')
             
         g.db.execute("INSERT INTO tweets VALUES (?, ?)", [tweet.text, tweet.user.location])      
@@ -53,7 +55,7 @@ def home():
     if hasattr(g, 'db'):
         g.db.close()
 
-    return render_template('index.html')
+    return render_template('index.html', tweets=tweet_list)
 
 
 if __name__ == '__main__':
