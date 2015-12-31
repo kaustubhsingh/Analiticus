@@ -40,11 +40,11 @@ def home():
         
         auth = OAuthHandler(ckey, csecret)
         auth.set_access_token(atoken, asecret)
-        
-        api = tweepy.API(auth)
 
         return render_template('index.html', tweets=keyword)
     
+        api = tweepy.API(auth)
+  
         query = keyword
         max_tweets = 50
         searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
