@@ -25,8 +25,9 @@ def home():
     if request.method == "POST":
         # get keyword that the user has entered
         keyword = request.form['keyword']
-        
-       
+        if keyword == "":
+                return render_template('index.html', tweets=tweet_list)
+      
         g.db = sqlite3.connect("tweets.db")
     
         g.db.execute("DROP TABLE IF EXISTS tweets")
