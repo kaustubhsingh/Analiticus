@@ -13,7 +13,8 @@ from flask import g
 try:
     import oauth
 except ImportError:
-
+    import os
+    
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
