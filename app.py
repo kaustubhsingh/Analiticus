@@ -49,18 +49,26 @@ def home():
         searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
       
         for tweet in searched_tweets:      
-            print tweet.text.encode('utf-8')
+            #print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
             
-            print tweet.user.location.encode('utf-8')
+            #print tweet.user.location.encode('utf-8')
                 
             g.db.execute("INSERT INTO tweets VALUES (?, ?)", [tweet.text, tweet.user.location])      
             g.db.commit()
     
+        data = g.db.execute("SELECT DISTINCT location from tweets")
+    
+        viewlist = []
+        for row in data:
+            print row
+            viewlist.append(row[0])
+            
+            
         if hasattr(g, 'db'):
             g.db.close()
 
-    return render_template('index.html', tweets=tweet_list)
+    return render_template('index.html', tweets=viewlist)
 
 
 if __name__ == '__main__':
