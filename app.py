@@ -14,7 +14,7 @@ try:
     import oauth
 except ImportError:
     import os
-#import sentiment    
+import sentiment    
     
 app = Flask(__name__)
 
@@ -32,7 +32,7 @@ def home():
         g.db = sqlite3.connect("tweets.db")
     
         g.db.execute("DROP TABLE IF EXISTS tweets")
-        g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
+        g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT, score INT );")
  
         ckey   = os.environ['ckey']
         csecret= os.environ['csecret']
@@ -54,24 +54,27 @@ def home():
             #print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
             
-            #score = sentiment.tweet_score(tweet.text)
-            score = 0
+            score = sentiment.tweet_score(tweet.text)
             
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             g.db.commit()
     
-        data = g.db.execute("SELECT DISTINCT location from tweets")
+        data = g.db.execute("SELECT tweet, location, score FROM tweets LIMIT 10")
     
         viewlist = []
+        viewlocations = []
+        viewscores = []
         for row in data:
-            #print row
+            print row
             viewlist.append(row[0])
-            
+            viewlocations.append(row[1])
+            viewscores.append(row[2])
             
         if hasattr(g, 'db'):
             g.db.close()
 
-    return render_template('index.html', tweets=viewlist)
+    return render_template('index.html', tweets=viewlist,
+                           locations=viewlocations, scores=viewscores)
 
 
 if __name__ == '__main__':
