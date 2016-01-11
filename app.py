@@ -14,6 +14,7 @@ try:
     import oauth
 except ImportError:
     import os
+import sentiment    
     
 app = Flask(__name__)
 
@@ -31,7 +32,7 @@ def home():
         g.db = sqlite3.connect("tweets.db")
     
         g.db.execute("DROP TABLE IF EXISTS tweets")
-        g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
+        g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT, score INT );")
  
         ckey   = os.environ['ckey']
         csecret= os.environ['csecret']
