@@ -17,8 +17,6 @@ except ImportError:
 import sentiment    
 import logging
 
-
-
 app = Flask(__name__)
 
 app.logger.addHandler(logging.StreamHandler())
@@ -60,7 +58,7 @@ def home():
         #print dir(searched_tweets[0])
         for tweet in searched_tweets:      
             #print tweet.text.encode('utf-8')
-            tweet_list.append(tweet.text)
+            #tweet_list.append(tweet.text)
             
             score = sentiment.tweet_score(tweet.text)
             
