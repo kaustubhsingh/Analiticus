@@ -67,9 +67,9 @@ def home():
     
         data = g.db.execute("SELECT tweet, location, score FROM tweets LIMIT 10")
     
-        viewlist = []
-        viewlocations = []
-        viewscores = []
+        viewlist = list()
+        viewlocations = list()
+        viewscores = list()
         for row in data:
             print row
             viewlist.append(row[0])
