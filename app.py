@@ -14,7 +14,7 @@ try:
     import oauth
 except ImportError:
     import os
-import sentiment    
+#import sentiment    
     
 app = Flask(__name__)
 
@@ -54,8 +54,9 @@ def home():
             #print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
             
-            score = sentiment.tweet_score(tweet.text)
-                
+            #score = sentiment.tweet_score(tweet.text)
+            score = 0
+            
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             g.db.commit()
     
