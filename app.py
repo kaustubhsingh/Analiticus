@@ -54,7 +54,7 @@ def home():
             #print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
             
-            score = tweet_score(tweet.text)
+            score = sentiment.tweet_score(tweet.text)
                 
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             g.db.commit()

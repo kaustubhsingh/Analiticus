@@ -1,4 +1,5 @@
 import nltk
+#nltk.download('punkt')
 
 def get_scores(): 
     file = open("AFINN-111.txt")
