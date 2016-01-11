@@ -32,7 +32,7 @@ def home():
         g.db = sqlite3.connect("tweets.db")
     
         g.db.execute("DROP TABLE IF EXISTS tweets")
-        g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT, score INT );")
+        g.db.execute("CREATE TABLE tweets ( tweet TEXT, location TEXT );")
  
         ckey   = os.environ['ckey']
         csecret= os.environ['csecret']
