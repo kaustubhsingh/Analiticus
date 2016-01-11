@@ -49,7 +49,7 @@ def home():
         max_tweets = 50
         searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
       
-        print dir(searched_tweets[0])
+        #print dir(searched_tweets[0])
         for tweet in searched_tweets:      
             #print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
