@@ -15,7 +15,10 @@ try:
 except ImportError:
     import os
 import sentiment    
-    
+import logging
+
+
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -79,3 +82,5 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
