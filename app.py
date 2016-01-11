@@ -54,9 +54,9 @@ def home():
             #print tweet.text.encode('utf-8')
             tweet_list.append(tweet.text)
             
-            #print tweet.user.location.encode('utf-8')
+            score = tweet_score(tweet.text)
                 
-            g.db.execute("INSERT INTO tweets VALUES (?, ?)", [tweet.text, tweet.user.location])      
+            g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             g.db.commit()
     
         data = g.db.execute("SELECT DISTINCT location from tweets")
