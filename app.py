@@ -65,7 +65,7 @@ def home():
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             g.db.commit()
     
-        data = g.db.execute("SELECT tweet, location, score FROM tweets LIMIT 10")
+        data = g.db.execute("SELECT tweet, location, score FROM tweets")
     
         for row in data:
             print row
