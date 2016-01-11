@@ -27,13 +27,15 @@ app.logger.setLevel(logging.ERROR)
 @app.route('/', methods=['GET', 'POST'])
 def home():
 
-    tweet_list = list()
+    viewlist = list()
+    viewlocations = list()
+    viewscores = list()
     
     if request.method == "POST":
         # get keyword that the user has entered
         keyword = request.form['keyword']
         if keyword == "":
-                return render_template('index.html', tweets=tweet_list)
+                return render_template('index.html')
       
         g.db = sqlite3.connect("tweets.db")
     
@@ -67,9 +69,6 @@ def home():
     
         data = g.db.execute("SELECT tweet, location, score FROM tweets LIMIT 10")
     
-        viewlist = list()
-        viewlocations = list()
-        viewscores = list()
         for row in data:
             print row
             viewlist.append(row[0])
