@@ -28,6 +28,8 @@ def home():
     viewlist = list()
     viewlocations = list()
     viewscores = list()
+    pos_tweets = list()
+    pos_tweet_locations = list()
     
     if request.method == "POST":
         # get keyword that the user has entered
@@ -65,19 +67,32 @@ def home():
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             g.db.commit()
     
+        '''
         data = g.db.execute("SELECT tweet, location, score FROM tweets")
     
         for row in data:
-            print row
+            #print row
             viewlist.append(row[0])
             viewlocations.append(row[1])
             viewscores.append(row[2])
+        '''
+        
+        # most positive tweets
+        positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 20")
+        for row in positive_tweets_data:
+            #print row
+            pos_tweets.append(row[0])
+            pos_tweet_locations.append(row[1])
             
         if hasattr(g, 'db'):
             g.db.close()
 
-    return render_template('index.html', tweets=viewlist,
-                           locations=viewlocations, scores=viewscores)
+    return render_template('index.html',
+                           tweets     =  viewlist,
+                           locations  =  viewlocations,
+                           scores     =  viewscores,
+                           pos_tweets =  pos_tweets,
+                           pos_tweet_locations =  pos_tweet_locations)
 
 
 if __name__ == '__main__':
