@@ -54,7 +54,7 @@ def home():
         api = tweepy.API(auth)
   
         query = keyword
-        max_tweets = 50
+        max_tweets = 500
         searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
       
         #print dir(searched_tweets[0])
@@ -62,6 +62,7 @@ def home():
             #print tweet.text.encode('utf-8')
             #tweet_list.append(tweet.text)
             
+            #score = 1
             score = sentiment.tweet_score(tweet.text)
             
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
