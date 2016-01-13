@@ -107,6 +107,13 @@
 
 		  <tbody>
             
+              {% if (pos_tweets|length) %}
+                <tr>
+                  <th>{{ "Tweet" }}</th>
+                  <th>{{ "Location" }}</th>
+                </tr>
+              {% endif %}
+              
               {% for i in range(pos_tweets|length) %}
                 <tr>
                   <td>{{ pos_tweets[i] }}</td>
