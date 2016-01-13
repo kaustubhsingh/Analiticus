@@ -66,7 +66,7 @@ def home():
             score = sentiment.tweet_score(tweet.text)
             
             g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
-            g.db.commit()
+        
     
         '''
         data = g.db.execute("SELECT tweet, location, score FROM tweets")
@@ -86,6 +86,7 @@ def home():
             pos_tweet_locations.append(row[1])
             
         if hasattr(g, 'db'):
+            g.db.commit()
             g.db.close()
 
     return render_template('index.html',
