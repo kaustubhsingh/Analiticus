@@ -84,6 +84,13 @@ def home():
             #print row
             pos_tweets.append(row[0])
             pos_tweet_locations.append(row[1])
+
+        # most negative tweets
+        negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
+        for row in negative_tweets_data:
+            #print row
+            neg_tweets.append(row[0])
+            neg_tweet_locations.append(row[1])
             
         if hasattr(g, 'db'):
             g.db.commit()
@@ -95,7 +102,6 @@ def home():
                            scores     =  viewscores,
                            pos_tweets =  pos_tweets,
                            pos_tweet_locations =  pos_tweet_locations)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
