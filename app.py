@@ -87,15 +87,17 @@ def home():
             positive_tweets_data = g.db.execute("SELECT DISTINCT tweet, location FROM tweets ORDER BY score DESC LIMIT 20")
             for row in positive_tweets_data:
                 #print row
-                pos_tweets.append(row[0])
-                pos_tweet_locations.append(row[1])
+                if row[0] not in pos_tweets:
+                    pos_tweets.append(row[0])
+                    pos_tweet_locations.append(row[1])
     
             # most negative tweets
             negative_tweets_data = g.db.execute("SELECT DISTINCT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
             for row in negative_tweets_data:
                 #print row
-                neg_tweets.append(row[0])
-                neg_tweet_locations.append(row[1])
+                if row[0] not in pos_tweets:
+                    neg_tweets.append(row[0])
+                    neg_tweet_locations.append(row[1])
                 
             if hasattr(g, 'db'):
                 g.db.commit()
