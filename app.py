@@ -30,6 +30,8 @@ def home():
     viewscores = list()
     pos_tweets = list()
     pos_tweet_locations = list()
+    neg_tweets = list()
+    neg_tweet_locations = list()
     
     if request.method == "POST":
         # get keyword that the user has entered
