@@ -95,7 +95,7 @@ def home():
             negative_tweets_data = g.db.execute("SELECT DISTINCT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
             for row in negative_tweets_data:
                 #print row
-                if row[0] not in pos_tweets:
+                if row[0] not in neg_tweets:
                     neg_tweets.append(row[0])
                     neg_tweet_locations.append(row[1])
                 
