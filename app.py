@@ -84,14 +84,14 @@ def home():
             '''
             
             # most positive tweets
-            positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 20")
+            positive_tweets_data = g.db.execute("SELECT DISTINCT tweet, location FROM tweets ORDER BY score DESC LIMIT 20")
             for row in positive_tweets_data:
                 #print row
                 pos_tweets.append(row[0])
                 pos_tweet_locations.append(row[1])
     
             # most negative tweets
-            negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
+            negative_tweets_data = g.db.execute("SELECT DISTINCT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
             for row in negative_tweets_data:
                 #print row
                 neg_tweets.append(row[0])
