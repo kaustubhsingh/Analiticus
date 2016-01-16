@@ -103,7 +103,10 @@ def home():
                            locations  =  viewlocations,
                            scores     =  viewscores,
                            pos_tweets =  pos_tweets,
-                           pos_tweet_locations =  pos_tweet_locations)
+                           pos_tweet_locations =  pos_tweet_locations,
+                           neg_tweets =  neg_tweets,
+                           neg_tweet_locations =  neg_tweet_locations                          
+                           )
 
 if __name__ == '__main__':
     app.run(debug=True)
