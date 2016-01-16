@@ -32,6 +32,7 @@ def home():
     pos_tweet_locations = list()
     neg_tweets = list()
     neg_tweet_locations = list()
+    error      = ""
     
     if request.method == "POST":
         # get keyword that the user has entered
@@ -57,47 +58,52 @@ def home():
   
         query = keyword
         max_tweets = 500
-        searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
-      
-        #print dir(searched_tweets[0])
-        for tweet in searched_tweets:      
-            #print tweet.text.encode('utf-8')
-            #tweet_list.append(tweet.text)
-            
-            #score = 1
-            score = sentiment.tweet_score(tweet.text)
-            
-            g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
         
-    
-        '''
-        data = g.db.execute("SELECT tweet, location, score FROM tweets")
-    
-        for row in data:
-            #print row
-            viewlist.append(row[0])
-            viewlocations.append(row[1])
-            viewscores.append(row[2])
-        '''
-        
-        # most positive tweets
-        positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 20")
-        for row in positive_tweets_data:
-            #print row
-            pos_tweets.append(row[0])
-            pos_tweet_locations.append(row[1])
-
-        # most negative tweets
-        negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
-        for row in negative_tweets_data:
-            #print row
-            neg_tweets.append(row[0])
-            neg_tweet_locations.append(row[1])
+        try:
+            searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
+                
+            #print dir(searched_tweets[0])
+            for tweet in searched_tweets:      
+                #print tweet.text.encode('utf-8')
+                #tweet_list.append(tweet.text)
+                
+                #score = 1
+                score = sentiment.tweet_score(tweet.text)
+                
+                g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
-        if hasattr(g, 'db'):
-            g.db.commit()
-            g.db.close()
-
+        
+            '''
+            data = g.db.execute("SELECT tweet, location, score FROM tweets")
+        
+            for row in data:
+                #print row
+                viewlist.append(row[0])
+                viewlocations.append(row[1])
+                viewscores.append(row[2])
+            '''
+            
+            # most positive tweets
+            positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 20")
+            for row in positive_tweets_data:
+                #print row
+                pos_tweets.append(row[0])
+                pos_tweet_locations.append(row[1])
+    
+            # most negative tweets
+            negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score ASC LIMIT 20")
+            for row in negative_tweets_data:
+                #print row
+                neg_tweets.append(row[0])
+                neg_tweet_locations.append(row[1])
+                
+            if hasattr(g, 'db'):
+                g.db.commit()
+                g.db.close()
+        
+        except TweepError:
+            error = "Twitter Search API's rate limit exceeded. Please try after some time!"
+            
     return render_template('index.html',
                            tweets     =  viewlist,
                            locations  =  viewlocations,
@@ -105,7 +111,8 @@ def home():
                            pos_tweets =  pos_tweets,
                            pos_tweet_locations =  pos_tweet_locations,
                            neg_tweets =  neg_tweets,
-                           neg_tweet_locations =  neg_tweet_locations                          
+                           neg_tweet_locations =  neg_tweet_locations,
+                           error      = error
                            )
 
 if __name__ == '__main__':
