@@ -63,16 +63,26 @@ def home():
             searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
                 
             #print dir(searched_tweets[0])
+            pos_score = 0
+            neg_score = 0
             for tweet in searched_tweets:      
                 #print tweet.text.encode('utf-8')
                 #tweet_list.append(tweet.text)
                 
                 #score = 1
                 score = sentiment.tweet_score(tweet.text)
+                if score > 0:
+                    pos_score += score
+                else:
+                    neg_score += score
                 
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
-        
+            # Save sentiment data for visualization
+            f = open('sentiment.json', 'w')
+            json.dump({'Positive': int(round(float(pos_score) / (pos_score - neg_score) * 100, 0)),
+                       'Negative': int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))}, f)
+            f.close()
             '''
             data = g.db.execute("SELECT tweet, location, score FROM tweets")
         
@@ -107,7 +117,7 @@ def home():
                 g.db.commit()
                 g.db.close()
         
-        except TweepError:
+        except IOError:
             error = "Twitter Search API's rate limit exceeded. Please try after some time!"
             
     return render_template('index.html',
