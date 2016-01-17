@@ -33,6 +33,7 @@ def home():
     neg_tweets = list()
     neg_tweet_locations = list()
     error      = ""
+    donut_chart_data = []
     
     if request.method == "POST":
         # get keyword that the user has entered
@@ -79,10 +80,9 @@ def home():
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
             # Save sentiment data for visualization
-            f = open('sentiment.json', 'w')
-            json.dump({'Positive': int(round(float(pos_score) / (pos_score - neg_score) * 100, 0)),
-                       'Negative': int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))}, f)
-            f.close()
+            donut_chart_data = {'Positive': int(round(float(pos_score) / (pos_score - neg_score) * 100, 0)),
+                                'Negative': int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))}
+            
             '''
             data = g.db.execute("SELECT tweet, location, score FROM tweets")
         
@@ -117,10 +117,11 @@ def home():
                 g.db.commit()
                 g.db.close()
         
-        except IOError:
+        except:
             error = "Twitter Search API's rate limit exceeded. Please try after some time!"
             
     return render_template('index.html',
+                           donut_chart_data = json.dumps(donut_chart_data),
                            tweets     =  viewlist,
                            locations  =  viewlocations,
                            scores     =  viewscores,
