@@ -58,7 +58,7 @@ def home():
         api = tweepy.API(auth)
   
         query = keyword
-        max_tweets = 500
+        max_tweets = 100
         
         try:
             searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
@@ -80,8 +80,10 @@ def home():
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
             # Save sentiment data for visualization
-            donut_chart_data = {'Positive': int(round(float(pos_score) / (pos_score - neg_score) * 100, 0)),
-                                'Negative': int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))}
+            donut_chart_data = [
+                                {label : 'Positive', count : int(round(float(pos_score) / (pos_score - neg_score) * 100, 0))},
+                                {label : 'Negative', count : int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))}
+                               ]
             
             '''
             data = g.db.execute("SELECT tweet, location, score FROM tweets")
