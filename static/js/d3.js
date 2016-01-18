@@ -8,7 +8,6 @@
                         { label: 'Negative', count: 28 }
                       ];
         
-        
         var width = 180;
         var height = 180;
         var donutWidth = 40;
