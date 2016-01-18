@@ -58,7 +58,7 @@ def home():
         api = tweepy.API(auth)
   
         query = keyword
-        max_tweets = 50
+        max_tweets = 100
         
         try:
             searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
@@ -79,21 +79,13 @@ def home():
                 
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
-            # Save sentiment data for visualization
+
+            # Save sentiment data for visualization                            
             donut_chart_data = [
-                                {label : 'Positive', count : int(round(float(pos_score) / (pos_score - neg_score) * 100, 0))},
-                                {label : 'Negative', count : int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))}
+                                 int(round(float(pos_score) / (pos_score - neg_score) * 100, 0)),
+                                 int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))
                                ]
-            
-            '''
-            data = g.db.execute("SELECT tweet, location, score FROM tweets")
-        
-            for row in data:
-                #print row
-                viewlist.append(row[0])
-                viewlocations.append(row[1])
-                viewscores.append(row[2])
-            '''
+            print json.dumps(donut_chart_data)
             
             # most positive tweets
             positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 50")
@@ -119,7 +111,7 @@ def home():
                 g.db.commit()
                 g.db.close()
         
-        except:
+        except IOError:
             error = "Twitter Search API's rate limit exceeded. Please try after some time!"
             
     return render_template('index.html',

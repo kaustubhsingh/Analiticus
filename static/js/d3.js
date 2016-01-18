@@ -1,13 +1,27 @@
 (function(d3) {
         'use strict';
-        //var dataset = {{ donut_chart_data|safe }};
-        //window.alert("myObject is " + dataset.toSource());
+        var dataset_raw = {{ donut_chart_data|safe }};
+       
+        var dataset = [];
+        var labels = ["Positive", "Negative"];
         
+        
+        var len = 2;
+        for (var i = 0; i < len; i++) {
+            dataset.push({
+                label: labels[i],
+                count: dataset_raw[i]
+            });
+        }
+
+       /*
         var dataset = [
                         { label: 'Positive', count: 72 }, 
                         { label: 'Negative', count: 28 }
                       ];
-        
+         
+         */
+       
         var width = 180;
         var height = 180;
         var donutWidth = 40;
@@ -26,8 +40,8 @@
           .outerRadius(radius);
         var pie = d3.layout.pie()
           .value(function(d) { return d.count; })
-          .startAngle(-90 * (pi/180))
-          .endAngle(90 * (pi/180))
+          .startAngle(-90 * (Math.PI/180))
+          .endAngle(90 * (Math.PI/180))
           .sort(null);
         var path = svg.selectAll('path')
           .data(pie(dataset))
