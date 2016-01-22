@@ -118,7 +118,7 @@ def home():
             
     return render_template('index.html',
                            keyword    =  keyword,
-                           pos_score  =  donut_chart_data[0],
+                           pos_score  =  pos_percent,
                            donut_chart_data = json.dumps(donut_chart_data),
                            tweets     =  viewlist,
                            locations  =  viewlocations,
