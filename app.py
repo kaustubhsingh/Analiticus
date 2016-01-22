@@ -34,6 +34,8 @@ def home():
     neg_tweet_locations = list()
     error      = ""
     donut_chart_data = []
+    pos_score  = 0
+    keyword    = ""
     
     if request.method == "POST":
         # get keyword that the user has entered
@@ -115,6 +117,7 @@ def home():
             error = "Twitter Search API's rate limit exceeded. Please try after some time!"
             
     return render_template('index.html',
+                           keyword    =  keyword,
                            donut_chart_data = json.dumps(donut_chart_data),
                            pos_score  =  donut_chart_data[0],
                            tweets     =  viewlist,
