@@ -19,8 +19,8 @@ import sentiment
 
 app = Flask(__name__)
 
-#app.logger.addHandler(logging.StreamHandler())
-#app.logger.setLevel(logging.ERROR)
+app.logger.addHandler(logging.StreamHandler())
+app.logger.setLevel(logging.ERROR)
     
 @app.route('/', methods=['GET', 'POST'])
 def home():
