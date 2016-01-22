@@ -36,6 +36,7 @@ def home():
     donut_chart_data = []
     pos_score  = 0
     keyword    = ""
+    pos_score  = 0
     
     if request.method == "POST":
         # get keyword that the user has entered
