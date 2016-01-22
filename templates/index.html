@@ -74,7 +74,7 @@
     </div>
 
 	<div class="container">
-	  <div id="chart" align="center" class="col-md-5"></div>
+	  <div id="chart" align="center" class="col-md-4"></div>
   
 	  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	  <script>
@@ -101,7 +101,7 @@
 			var donutWidth = 40;
 			var radius = Math.min(width, height) / 2;
 			var color = d3.scale.ordinal()
-				.range(['green', 'red']); 
+				.range(['#66ff66', '#ff3300']); 
 			var svg = d3.select('#chart')
 			  .append('svg')
 			  .attr('width', width)
@@ -130,7 +130,7 @@
 		
 	  </script>
 
-	  <div class="col-md-6">
+	  <div class="col-md-8">
 		  {% if (donut_chart_data|length) %}
 			  <h2 class="alert alert-info" align="center">Twitteratti is <b>{{ pos_score }}%</b>
 			  positive about <b>{{keyword}}</b></h2>
