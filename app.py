@@ -80,11 +80,11 @@ def home():
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
 
-            # Save sentiment data for visualization                            
-            donut_chart_data = [
-                                 int(round(float(pos_score) / (pos_score - neg_score) * 100, 0)),
-                                 int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))
-                               ]
+            # Save sentiment data for visualization
+            
+            pos_percent = int(round(float(pos_score) / (pos_score - neg_score) * 100, 0))
+            neg_percent = int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))
+            donut_chart_data = [ pos_percent, neg_percent]
             print json.dumps(donut_chart_data)
             
             # most positive tweets
@@ -116,6 +116,7 @@ def home():
             
     return render_template('index.html',
                            donut_chart_data = json.dumps(donut_chart_data),
+                           pos_score  =  donut_chart_data[0],
                            tweets     =  viewlist,
                            locations  =  viewlocations,
                            scores     =  viewscores,

@@ -73,6 +73,13 @@
         {% endif %}
     </div>
 
+    <div>
+        {% if (donut_chart_data|length) %}
+			<br><br>
+            <h3>TwitX-o-meter is {{ pos_score }}% positive</h3>
+        {% endif %}
+    </div>
+
 	<div class="container">
 	  <div id="chart" align="center"></div>
 	</div>
