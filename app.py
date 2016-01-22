@@ -34,7 +34,8 @@ def home():
     neg_tweet_locations = list()
     error         = ""
     donut_chart_data = []
-    pos_score, pos_percent     = 0
+    pos_score     = 0;
+    pos_percent   = 0
     keyword       = ""
 
     
