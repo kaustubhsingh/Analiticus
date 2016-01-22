@@ -25,18 +25,18 @@ app.logger.setLevel(logging.ERROR)
 @app.route('/', methods=['GET', 'POST'])
 def home():
 
-    viewlist = list()
+    viewlist      = list()
     viewlocations = list()
-    viewscores = list()
-    pos_tweets = list()
+    viewscores    = list()
+    pos_tweets    = list()
     pos_tweet_locations = list()
-    neg_tweets = list()
+    neg_tweets    = list()
     neg_tweet_locations = list()
-    error      = ""
+    error         = ""
     donut_chart_data = []
-    pos_score  = 0
-    keyword    = ""
-    pos_score  = 0
+    pos_score, pos_percent     = 0
+    keyword       = ""
+
     
     if request.method == "POST":
         # get keyword that the user has entered
