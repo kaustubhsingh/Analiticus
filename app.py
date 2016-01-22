@@ -15,7 +15,7 @@ try:
 except ImportError:
     import os
 import sentiment    
-#import logging
+import logging
 
 app = Flask(__name__)
 
