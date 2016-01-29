@@ -10,7 +10,7 @@
 }
 .nav-justified > li > a {
   color: #b56969;
-   background-color: #b56969; /* Old browsers */
+  background-color: #b56969; /* Old browsers */
 }
 
 /*
@@ -26,3 +26,10 @@
   border-color: #b56969;
 }
 
+.legend {                                                  
+  font-size: 12px;                                         
+}
+
+rect {                                                     
+  stroke-width: 2;                                         
+} 
