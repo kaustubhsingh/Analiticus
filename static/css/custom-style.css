@@ -26,6 +26,10 @@
   border-color: #b56969;
 }
 
+h2 {
+  color: #c5d5cb;
+}
+
 .legend {                                                  
   font-size: 12px;                                         
 }
@@ -34,6 +38,3 @@ rect {
   stroke-width: 2;                                         
 }
 
-h2 {
-  color: #c5d5cb;
-}
