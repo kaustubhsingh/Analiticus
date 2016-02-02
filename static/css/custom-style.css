@@ -38,11 +38,6 @@ rect {
   stroke-width: 2;                                         
 }
 
-#chart {
-  height: 270px;
-  position: relative;
-  width: 270px;
-}
 
 .tooltip {                                                     
   background: #eee;                                             
