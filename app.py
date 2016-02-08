@@ -95,7 +95,7 @@ def home():
             neu_percent = int(round(float(neu_score) / (pos_score + neg_score + neu_score) * 100, 0))
             
             donut_chart_data = [ pos_percent, neu_percent, neg_percent]
-            print json.dumps(donut_chart_data)
+            #print json.dumps(donut_chart_data)
             
             # most positive tweets
             positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 50")
