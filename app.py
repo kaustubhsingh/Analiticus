@@ -63,7 +63,7 @@ def home():
         api = tweepy.API(auth)
   
         query = keyword
-        max_tweets = 100
+        max_tweets = 200
         
         try:
             searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
@@ -71,25 +71,30 @@ def home():
             #print dir(searched_tweets[0])
             pos_score = 0
             neg_score = 0
+            neu_score = 0
+            
             for tweet in searched_tweets:      
                 #print tweet.text.encode('utf-8')
                 #tweet_list.append(tweet.text)
                 
                 #score = 1
                 score = sentiment.tweet_score(tweet.text)
-                if score >= 0:
-                    pos_score += score
+                if score > 0.01:
+                    pos_score += 1
+                elif score < -0.01:
+                    neg_score += 1
                 else:
-                    neg_score += score
+                    neu_score += 1
                 
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
 
             # Save sentiment data for visualization
+            pos_percent = int(round(float(pos_score) / (pos_score + neg_score + neu_score) * 100, 0))
+            neg_percent = int(round(float(neg_score) / (pos_score + neg_score + neu_score) * 100, 0))
+            neu_percent = int(round(float(neu_score) / (pos_score + neg_score + neu_score) * 100, 0))
             
-            pos_percent = int(round(float(pos_score) / (pos_score - neg_score) * 100, 0))
-            neg_percent = int(round(float(-1* neg_score) / (pos_score - neg_score) * 100, 0))
-            donut_chart_data = [ pos_percent, neg_percent]
+            donut_chart_data = [ pos_percent, neu_percent, neg_percent]
             print json.dumps(donut_chart_data)
             
             # most positive tweets

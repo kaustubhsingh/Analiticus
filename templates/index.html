@@ -84,10 +84,10 @@
 			var dataset_raw = {{ donut_chart_data|safe }};
 		   
 			var dataset = [];
-			var labels = ["Positive", "Negative"];
+			var labels = ["Positive", "Neutral", "Negative"];
 			
 			
-			var len = 2;
+			var len = labels.length;
 			for (var i = 0; i < len; i++) {
 				dataset.push({
 					label: labels[i],
@@ -104,7 +104,7 @@
 			
 			var radius = Math.min(width, height) / 2;
 			var color = d3.scale.ordinal()
-				.range(['#89bdd3', '#f79f79']); 
+				.range(['#00b359', '#89bdd3', '#f79f79']); 
 			var svg = d3.select('#chart')
 			  .append('svg')
 			  .attr('width', width)
