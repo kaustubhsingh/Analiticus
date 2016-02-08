@@ -3,23 +3,8 @@
   color: #2F8F75;
 }
 
-/* Customize the nav-justified links to be fill the entire space of the .navbar */
 
-.nav .nav-justified {
-  background-color: #2F8F75;
-}
-.nav-justified > li > a {
-  color: #2F8F75;
-  background-color: #2F8F75; /* Old browsers */
-}
 
-/*
-.nav-justified > .active > a,
-.nav-justified > .active > a:hover,
-.nav-justified > .active > a:focus {
-  background-color: grey;
-}
-*/
 
 .btn-primary {
   background-color: #2F8F75;
