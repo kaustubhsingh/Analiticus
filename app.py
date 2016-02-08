@@ -14,7 +14,8 @@ try:
     import oauth
 except ImportError:
     import os
-import sentiment    
+import sentiment
+
 #import logging
 
 app = Flask(__name__)
@@ -76,7 +77,7 @@ def home():
                 
                 #score = 1
                 score = sentiment.tweet_score(tweet.text)
-                if score > 0:
+                if score >= 0:
                     pos_score += score
                 else:
                     neg_score += score

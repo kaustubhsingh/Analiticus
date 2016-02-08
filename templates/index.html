@@ -74,7 +74,7 @@
     </div>
 
 	<div class="container">
-	  <div id="chart" align="center" class="col-md-4"></div>
+	  <div id="chart" align="center" ></div>
   
 	  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	  <script>
@@ -133,6 +133,17 @@
 				return color(d.data.label);
 			  });
 
+			  var text=svg.selectAll('text')
+			  .data(pie(dataset))
+			  .enter()
+			  .append("text")
+			  .attr("transform", function (d) {
+				  return "translate(" + arc.centroid(d) + ")";
+			  })
+			  .attr("text-anchor", "middle")
+			  .text(function(d){
+				  return d.data.count+"%" ;
+			  });
   
 
 			  
@@ -160,18 +171,23 @@
 			  .attr('y', legendRectSize - legendSpacing)              
 			  .text(function(d) { return d; });                       
 			  
-			  
+
+						
 		  })(window.d3);
 		
 		
 	  </script>
-
+	  
+	  <!--
 	  <div class="col-md-8"> 
 		  {% if (pos_tweets|length) %}
 			  <h2>TwitXplor is <b>{{ pos_score }}%</b>
 			  positive about <b>{{keyword}}</b></h2>
 		  {% endif %}
-	  </div>	
+		  
+	  </div>
+	  -->
+	  
     </div>
 	
     <div  class="container table-responsive">

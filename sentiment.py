@@ -1,3 +1,10 @@
+from textblob import TextBlob
+
+def tweet_score(tweet):
+          
+    return TextBlob(tweet).polarity
+
+'''
 import nltk
 nltk.download('punkt')
 
@@ -21,3 +28,5 @@ def tweet_score(tweet):
             score += scores[w.lower()]
           
     return score
+    
+'''
