@@ -75,7 +75,7 @@ def home():
             
             for tweet in searched_tweets:      
                 #print tweet.text.encode('utf-8')
-                #tweet_list.append(tweet.text)
+                viewlist.append(tweet.text)
                 
                 #score = 1
                 score = sentiment.tweet_score(tweet.text)
