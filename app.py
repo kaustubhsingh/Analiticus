@@ -15,6 +15,8 @@ try:
 except ImportError:
     import os
 import sentiment
+import similar
+
 
 #import logging
 
@@ -103,9 +105,10 @@ def home():
             for row in positive_tweets_data:
                 #print row
                 if pos_count < 10 and row[0] not in pos_tweets:
-                    pos_tweets.append(row[0])
-                    pos_tweet_locations.append(row[1])
-                    pos_count +=1
+                    if similar.not_similar(row[0], pos_tweets):
+                        pos_tweets.append(row[0])
+                        pos_tweet_locations.append(row[1])
+                        pos_count +=1
     
             # most negative tweets
             negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score < -0.01 ORDER BY score ASC LIMIT 50")
