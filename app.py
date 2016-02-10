@@ -116,7 +116,7 @@ def home():
             for row in negative_tweets_data:
                 #print row
                 if neg_count < 10 and row[0] not in neg_tweets:
-                    if similar.not_similar(row[0], pos_tweets):
+                    if similar.not_similar(row[0], neg_tweets):
                         neg_tweets.append(row[0])
                         neg_tweet_locations.append(row[1])
                         neg_count += 1
