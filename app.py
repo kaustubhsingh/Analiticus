@@ -98,7 +98,7 @@ def home():
             #print json.dumps(donut_chart_data)
             
             # most positive tweets
-            positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score DESC LIMIT 50")
+            positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score > 0.01 ORDER BY score DESC LIMIT 50")
             pos_count = 0
             for row in positive_tweets_data:
                 #print row
