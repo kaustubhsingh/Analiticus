@@ -8,7 +8,7 @@ def not_similar(str_a, list):
     for str_b in list:
         match = difflib.SequenceMatcher(None, str_a, str_b).ratio()
         print (match)
-        if match > 0.85:
+        if match > 0.8:
             print ("false")
             return False
 
