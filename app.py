@@ -108,7 +108,7 @@ def home():
                     pos_count +=1
     
             # most negative tweets
-            negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets ORDER BY score ASC LIMIT 50")
+            negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score < -0.01 ORDER BY score ASC LIMIT 50")
             neg_count = 0
             for row in negative_tweets_data:
                 #print row
