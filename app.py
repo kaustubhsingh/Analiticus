@@ -116,9 +116,10 @@ def home():
             for row in negative_tweets_data:
                 #print row
                 if neg_count < 10 and row[0] not in neg_tweets:
-                    neg_tweets.append(row[0])
-                    neg_tweet_locations.append(row[1])
-                    neg_count += 1
+                    if similar.not_similar(row[0], pos_tweets):
+                        neg_tweets.append(row[0])
+                        neg_tweet_locations.append(row[1])
+                        neg_count += 1
                 
             if hasattr(g, 'db'):
                 g.db.commit()
