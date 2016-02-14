@@ -142,5 +142,13 @@ def home():
                            error      = error
                            )
 
+@app.route('/faq', methods=['GET'])
+def faq():
+    return render_template('faq.html')
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    return render_template('contact.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
