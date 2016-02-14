@@ -1,34 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>smajik</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="//getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
-
-    <!-- Custom styles for this app -->
-    <link href="{{ url_for('static', filename='css/custom-style.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
- 
-  </head>
-
-  <body>
-
-    <div class="container">
-
+{% extends "layout.html" %}
+{% block content %}
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <div class="masthead">
@@ -251,15 +222,4 @@
 	  </table>
     </div>
 
-      <!-- Site footer -->
-	  <div class="container footerWrap">
-		  <footer class="footer">
-			<p>&copy; Kaustubh Singh 2016</p>
-		  </footer>
-	  </div>
-
-    </div> <!-- /container -->
-
-
-  </body>
-</html>
+{% endblock %}
