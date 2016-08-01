@@ -142,9 +142,9 @@ def home():
                            error      = error
                            )
 
-@app.route('/faq', methods=['GET'])
-def faq():
-    return render_template('faq.html')
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html')
 
 @app.route('/contact', methods=['GET'])
 def contact():
