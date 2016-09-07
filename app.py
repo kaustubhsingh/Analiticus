@@ -153,6 +153,8 @@ mail = Mail(app)
 def contact():
 
     if request.method == 'POST':
+        
+        '''
         msg = Message("Message from your visitor" + request.form.name.data,
                           sender='KS',
                           recipients=['mail.smajik@mail.com'])
@@ -161,6 +163,8 @@ def contact():
             %s
             """ % (request.form.name.data, request.form.email.data, request.form.message.data)
         mail.send(msg)
+        '''
+        
         return render_template('thanks.html')
     elif request.method == 'GET':
         return render_template('contact.html')
