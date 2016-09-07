@@ -161,7 +161,7 @@ def contact():
             %s
             """ % (request.form.name.data, request.form.email.data, request.form.message.data)
         mail.send(msg)
-        return "Successfully  sent message!"
+        return render_template('thanks.html')
     elif request.method == 'GET':
         return render_template('contact.html')
 
