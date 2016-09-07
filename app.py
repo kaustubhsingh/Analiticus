@@ -149,7 +149,7 @@ def about():
 
 mail = Mail(app)
 
-@app.route('/contact', methods=['GET'])
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
 
     if request.method == 'POST':
