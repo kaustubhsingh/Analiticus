@@ -16,7 +16,7 @@ except ImportError:
     import os
 import sentiment
 import similar
-
+import email
 
 #import logging
 
@@ -146,9 +146,23 @@ def home():
 def about():
     return render_template('about.html')
 
+mail = Mail(app)
+
 @app.route('/contact', methods=['GET'])
 def contact():
-    return render_template('contact.html')
+
+    if request.method == 'POST':
+        msg = Message("Message from your visitor" + request.form.name.data,
+                          sender='KS',
+                          recipients=['mail.smajik@mail.com'])
+        msg.body = """
+            From: %s <%s>,
+            %s
+            """ % (request.form.name.data, request.form.email.data, request.form.message.data)
+        mail.send(msg)
+        return "Successfully  sent message!"
+    elif request.method == 'GET':
+        return render_template('contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
