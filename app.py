@@ -17,6 +17,7 @@ except ImportError:
 import sentiment
 import similar
 import email
+from flask_mail import Mail, Message
 
 #import logging
 
