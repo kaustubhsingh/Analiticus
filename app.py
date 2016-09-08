@@ -154,17 +154,17 @@ def contact():
 
     if request.method == 'POST':
         
-        print (request.form['yourname'])
-        '''
-        msg = Message("Message from your visitor" + request.form.name.data,
+        #print (request.form['yourname'])
+        
+        msg = Message("Message from your visitor" + request.form['yourname'],
                           sender='KS',
                           recipients=['mail.smajik@mail.com'])
         msg.body = """
             From: %s <%s>,
             %s
-            """ % (request.form.name.data, request.form.email.data, request.form.message.data)
+            """ % (request.form['yourname'], request.form['youremail'], request.form['yourmessage'])
         mail.send(msg)
-        '''
+        
         
         return render_template('thanks.html')
     elif request.method == 'GET':
