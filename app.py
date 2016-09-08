@@ -154,7 +154,8 @@ def contact():
 
     if request.method == 'POST':
         
-        print (app.config['MAIL_PORT'])
+        #print (app.config['MAIL_PORT'])
+        print ("testing!")
         
         msg = Message("Message from your visitor",
                           sender='KS',
