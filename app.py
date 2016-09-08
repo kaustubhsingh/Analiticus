@@ -16,12 +16,14 @@ except ImportError:
     import os
 import sentiment
 import similar
-import email
+
 from flask_mail import Mail, Message
 
 #import logging
 
 app = Flask(__name__)
+
+import email
 
 #app.logger.addHandler(logging.StreamHandler())
 #app.logger.setLevel(logging.ERROR)
@@ -154,7 +156,7 @@ def contact():
 
     if request.method == 'POST':
         
-        #print (app.config['MAIL_PORT'])
+        print (app.config['MAIL_PORT'])
         print ("testing!")
         
         msg = Message("Message from your visitor",
