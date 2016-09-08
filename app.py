@@ -154,7 +154,7 @@ def contact():
 
     if request.method == 'POST':
         
-        print (request.form['name'])
+        print (request.form['yourname'])
         '''
         msg = Message("Message from your visitor" + request.form.name.data,
                           sender='KS',
