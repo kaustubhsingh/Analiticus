@@ -164,8 +164,7 @@ def contact():
             %s
             """ % (request.form['yourname'], request.form['youremail'], request.form['yourmessage'])
         mail.send(msg)
-        
-        
+             
         return render_template('thanks.html')
     elif request.method == 'GET':
         return render_template('contact.html')
