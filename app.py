@@ -159,11 +159,14 @@ def contact():
         msg = Message("Message from your visitor" + request.form['yourname'],
                           sender='KS',
                           recipients=['mail.smajik@mail.com'])
+        '''
         msg.body = """
             From: %s <%s>,
             %s
             """ % (request.form['yourname'], request.form['youremail'], request.form['yourmessage'])
-        mail.send(msg)
+        mail.send(msg) '''
+        
+        msg.body = "testing"
              
         return render_template('thanks.html')
     elif request.method == 'GET':
