@@ -168,7 +168,7 @@ def contact():
         
         msg = Message("Message from your visitor",
                           sender='KS',
-                          recipients=['mail.smajik@mail.com'])
+                          recipients=['smajik23@gmail.com'])
         '''
         msg.body = """
             From: %s <%s>,
