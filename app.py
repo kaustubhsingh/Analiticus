@@ -24,9 +24,9 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 
-txt = open(email.txt)
+#txt = open(email.txt)
 
-print txt.read()
+#print txt.read()
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
