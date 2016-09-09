@@ -31,7 +31,7 @@ print txt.read()
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'smajik23@gmail.com'
-app.config['MAIL_PASSWORD'] = txt.read()
+app.config['MAIL_PASSWORD'] = 'smajikforyou'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
