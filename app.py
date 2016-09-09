@@ -177,6 +177,7 @@ def contact():
         mail.send(msg) '''
         
         msg.body = "testing"
+        mail.send(msg)
              
         return render_template('thanks.html')
     elif request.method == 'GET':
