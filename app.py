@@ -24,13 +24,9 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 
-#txt = open(email.txt)
-
-#print txt.read()
-
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'smajik23@gmail.com'
+app.config['MAIL_USERNAME'] = os.environ['MAIL_USERNAME']
 app.config['MAIL_PASSWORD'] = os.environ['MAIL_PASSWORD']
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
@@ -176,18 +172,18 @@ def contact():
         #print (app.config['MAIL_PORT'])
         print ("testing!")
         
-        msg = Message("Message from your visitor",
+        msg = Message("Message from your visitor " + request.form['yourname'],
                           sender='KS',
                           recipients=['smajik23@gmail.com'])
-        '''
+        
         msg.body = """
             From: %s <%s>,
             %s
             """ % (request.form['yourname'], request.form['youremail'], request.form['yourmessage'])
-        mail.send(msg) '''
+        mail.send(msg) 
         
-        msg.body = "testing"
-        mail.send(msg)
+        #msg.body = "testing"
+        #mail.send(msg)
              
         return render_template('thanks.html')
     elif request.method == 'GET':
