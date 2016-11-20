@@ -169,7 +169,7 @@ def contact():
 
     if request.method == 'POST':
         
-        #print (app.config['MAIL_PORT'])
+        '''
         print ("testing!")
         
         msg = Message("Message from your visitor " + request.form['yourname'],
@@ -180,7 +180,7 @@ def contact():
             From: %s <%s>,
             %s
             """ % (request.form['yourname'], request.form['youremail'], request.form['yourmessage'])
-        mail.send(msg) 
+        mail.send(msg) '''
              
         return render_template('thanks.html')
     elif request.method == 'GET':
