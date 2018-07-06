@@ -92,9 +92,6 @@ def home():
                 
                 print dir(tweet)
                 
-#                if "extended_tweet" in dir(tweet):
- #               	tweet_full = tweet.extended_tweet.full_text
-  #              else:
                 tweet_full = tweet.full_text
                 	
                 viewlist.append(tweet_full)
@@ -102,11 +99,11 @@ def home():
                 
                 #score = 1
                 score = sentiment.tweet_score(tweet_full)
-                if score > 0.01:
+                if score > 0.2:
                     pos_score += 1
-                elif score < -0.01:
+                elif score < -0.2:
                     neg_score += 1
-                else:
+                elif: score > -0.01 and score < 0.01
                     neu_score += 1
                 
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet_full, tweet.user.location, score])      
