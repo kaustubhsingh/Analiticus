@@ -91,7 +91,7 @@ def home():
             for tweet in searched_tweets:                     
                 
                 if len(tweet.text) > 140:
-                	tweet_full = tweet.extended_tweet['full_text']
+                	tweet_full = tweet.extended_tweet.full_text
                 else:
                 	tweet_full = tweet.text
                 	
