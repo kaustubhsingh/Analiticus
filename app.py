@@ -81,7 +81,7 @@ def home():
         max_tweets = 200
         
         try:
-            searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
+            searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en', tweet_mode='extended').items(max_tweets)]
                 
             #print dir(searched_tweets[0])
             pos_score = 0
@@ -92,10 +92,10 @@ def home():
                 
                 print dir(tweet)
                 
-                if "extended_tweet" in dir(tweet):
-                	tweet_full = tweet.extended_tweet.full_text
-                else:
-                	tweet_full = tweet.text
+#                if "extended_tweet" in dir(tweet):
+ #               	tweet_full = tweet.extended_tweet.full_text
+  #              else:
+                	tweet_full = tweet.full_text
                 	
                 viewlist.append(tweet_full)
                 #viewlist.append(len(tweet.text))
