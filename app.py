@@ -19,7 +19,7 @@ import similar
 
 from flask_mail import Mail, Message
 
-#import logging
+import logging
 import sys
 
 app = Flask(__name__)
@@ -35,8 +35,8 @@ app.config['MAIL_USE_SSL'] = True
 
 
 
-#app.logger.addHandler(logging.StreamHandler())
-#app.logger.setLevel(logging.ERROR)
+app.logger.addHandler(logging.StreamHandler())
+app.logger.setLevel(logging.ERROR)
     
 @app.route('/', methods=['GET', 'POST'])
 def home():
