@@ -1,24 +1,3 @@
-2018-07-06T15:29:54.232447+00:00 app[web.1]: 0.192307692308
-2018-07-06T15:29:54.233632+00:00 app[web.1]: 0.224066390041
-2018-07-06T15:29:54.234418+00:00 app[web.1]: 0.136054421769
-2018-07-06T15:29:54.236181+00:00 app[web.1]: 0.270042194093
-2018-07-06T15:29:54.236218+00:00 app[web.1]: true
-2018-07-06T15:29:54.237503+00:00 app[web.1]: 0.251256281407
-2018-07-06T15:29:54.239667+00:00 app[web.1]: 0.352112676056
-2018-07-06T15:29:54.240684+00:00 app[web.1]: 0.263157894737
-2018-07-06T15:29:54.242579+00:00 app[web.1]: 0.192857142857
-2018-07-06T15:29:54.244197+00:00 app[web.1]: 0.303797468354
-2018-07-06T15:29:54.244234+00:00 app[web.1]: true
-2018-07-06T15:29:54.245486+00:00 app[web.1]: 0.212121212121
-2018-07-06T15:29:54.247273+00:00 app[web.1]: 0.17667844523
-2018-07-06T15:29:54.248308+00:00 app[web.1]: 0.179894179894
-2018-07-06T15:29:54.250723+00:00 app[web.1]: 0.258064516129
-2018-07-06T15:29:54.252111+00:00 app[web.1]: 0.305084745763
-2018-07-06T15:29:54.253980+00:00 app[web.1]: 0.279569892473
-2018-07-06T15:29:54.254018+00:00 app[web.1]: true
-2018-07-06T15:29:54.254954+00:00 app[web.1]: 0.19512195122
-2018-07-06T15:29:54.256862+00:00 app[web.1]: 0.172413793103
-2018-07-06T15:29:54.257572+00:00 app[web.1]: 0.0612244897959
 2018-07-06T15:29:54.260135+00:00 app[web.1]: 0.188811188811
 2018-07-06T15:29:54.261598+00:00 app[web.1]: 0.230452674897
 2018-07-06T15:29:54.263675+00:00 app[web.1]: 0.244755244755
@@ -98,3 +77,24 @@
 2018-07-06T15:29:54.362940+00:00 app[web.1]: 0.40830449827
 2018-07-06T15:29:54.364733+00:00 app[web.1]: true
 2018-07-06T15:29:54.423830+00:00 heroku[router]: at=info method=POST path="/" host=www.smajik.com request_id=11490a00-48f6-4025-a939-3e9cba40f6ea fwd="173.63.245.30" dyno=web.1 connect=0ms service=4081ms status=200 bytes=12156 protocol=http
+2018-07-06T15:34:53.000000+00:00 app[api]: Build started by user kaustubh.singh@gmail.com
+2018-07-06T15:35:09.022738+00:00 app[api]: Deploy b7fb5704 by user kaustubh.singh@gmail.com
+2018-07-06T15:35:09.022738+00:00 app[api]: Release v296 created by user kaustubh.singh@gmail.com
+2018-07-06T15:35:09.209575+00:00 heroku[web.1]: Restarting
+2018-07-06T15:35:09.214707+00:00 heroku[web.1]: State changed from up to starting
+2018-07-06T15:35:10.353794+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-07-06T15:35:10.379101+00:00 app[web.1]: [2018-07-06 15:35:10 +0000] [10] [INFO] Worker exiting (pid: 10)
+2018-07-06T15:35:10.391827+00:00 app[web.1]: [2018-07-06 15:35:10 +0000] [11] [INFO] Worker exiting (pid: 11)
+2018-07-06T15:35:10.400831+00:00 app[web.1]: [2018-07-06 15:35:10 +0000] [4] [INFO] Handling signal: term
+2018-07-06T15:35:10.412150+00:00 app[web.1]: [2018-07-06 15:35:10 +0000] [4] [INFO] Shutting down: Master
+2018-07-06T15:35:10.507760+00:00 heroku[web.1]: Process exited with status 0
+2018-07-06T15:35:14.823793+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file=-`
+2018-07-06T15:35:17.000000+00:00 app[api]: Build succeeded
+2018-07-06T15:35:18.042994+00:00 app[web.1]: [2018-07-06 15:35:18 +0000] [4] [INFO] Starting gunicorn 19.3.0
+2018-07-06T15:35:18.043570+00:00 app[web.1]: [2018-07-06 15:35:18 +0000] [4] [INFO] Listening at: http://0.0.0.0:28939 (4)
+2018-07-06T15:35:18.043717+00:00 app[web.1]: [2018-07-06 15:35:18 +0000] [4] [INFO] Using worker: sync
+2018-07-06T15:35:18.051083+00:00 app[web.1]: [2018-07-06 15:35:18 +0000] [10] [INFO] Booting worker with pid: 10
+2018-07-06T15:35:18.087353+00:00 app[web.1]: [2018-07-06 15:35:18 +0000] [11] [INFO] Booting worker with pid: 11
+2018-07-06T15:35:19.262316+00:00 heroku[web.1]: State changed from starting to up
+2018-07-06T15:35:30.236511+00:00 heroku[router]: at=info method=POST path="/" host=www.smajik.com request_id=6d8b83fb-6887-4d99-b9af-af1e422c6dfb fwd="173.63.245.30" dyno=web.1 connect=1ms service=58ms status=500 bytes=456 protocol=http
+2018-07-06T15:35:40.354744+00:00 heroku[router]: at=info method=POST path="/" host=www.smajik.com request_id=42d931a9-8167-4180-8921-5ed55598e380 fwd="173.63.245.30" dyno=web.1 connect=0ms service=30ms status=500 bytes=456 protocol=http
