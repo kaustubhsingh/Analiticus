@@ -91,7 +91,9 @@ def home():
             for tweet in searched_tweets:                     
                 
                 if len(tweet.text) > 140:
-                	tweet.text = extended_tweet['full_text']
+                	tweet_full = extended_tweet['full_text']
+                else:
+                	tweet_full = tweet.text
                 	
                 viewlist.append(tweet.text)
                 #viewlist.append(len(tweet.text))
@@ -105,7 +107,7 @@ def home():
                 else:
                     neu_score += 1
                 
-                g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
+                g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet_full, tweet.user.location, score])      
             
 
             # Save sentiment data for visualization
