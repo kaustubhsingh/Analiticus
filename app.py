@@ -90,7 +90,7 @@ def home():
             
             for tweet in searched_tweets:                     
                 
-                if 'extended_tweet' in dir(tweet):
+                if "extended_tweet" in dir(tweet):
                 	tweet_full = tweet.extended_tweet.full_text
                 else:
                 	tweet_full = tweet.text
