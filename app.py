@@ -97,11 +97,11 @@ def home():
                 else:
                 	tweet_full = tweet.text
                 	
-                viewlist.append(tweet.text)
+                viewlist.append(tweet_full)
                 #viewlist.append(len(tweet.text))
                 
                 #score = 1
-                score = sentiment.tweet_score(tweet.text)
+                score = sentiment.tweet_score(tweet_full)
                 if score > 0.01:
                     pos_score += 1
                 elif score < -0.01:
