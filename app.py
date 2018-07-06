@@ -95,7 +95,7 @@ def home():
 #                if "extended_tweet" in dir(tweet):
  #               	tweet_full = tweet.extended_tweet.full_text
   #              else:
-                	tweet_full = tweet.full_text
+                tweet_full = tweet.full_text
                 	
                 viewlist.append(tweet_full)
                 #viewlist.append(len(tweet.text))

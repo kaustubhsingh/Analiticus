@@ -1,100 +1,95 @@
-2018-07-06T16:35:48.629829+00:00 app[web.1]: true
-2018-07-06T16:35:48.631288+00:00 app[web.1]: 0.2
-2018-07-06T16:35:48.632663+00:00 app[web.1]: 0.229390681004
-2018-07-06T16:35:48.634134+00:00 app[web.1]: 0.207142857143
-2018-07-06T16:35:48.635611+00:00 app[web.1]: 0.192857142857
-2018-07-06T16:35:48.635614+00:00 app[web.1]: true
-2018-07-06T16:35:48.637153+00:00 app[web.1]: 0.278571428571
-2018-07-06T16:35:48.638548+00:00 app[web.1]: 0.301075268817
-2018-07-06T16:35:48.640115+00:00 app[web.1]: 0.214285714286
-2018-07-06T16:35:48.641079+00:00 app[web.1]: 0.214285714286
-2018-07-06T16:35:48.643424+00:00 app[web.1]: 0.321428571429
-2018-07-06T16:35:48.643427+00:00 app[web.1]: true
-2018-07-06T16:35:48.645945+00:00 app[web.1]: 0.328571428571
-2018-07-06T16:35:48.648567+00:00 app[web.1]: 0.308243727599
-2018-07-06T16:35:48.650711+00:00 app[web.1]: 0.264285714286
-2018-07-06T16:35:48.652144+00:00 app[web.1]: 0.321428571429
-2018-07-06T16:35:48.654402+00:00 app[web.1]: 0.164285714286
-2018-07-06T16:35:48.655388+00:00 app[web.1]: 0.192857142857
-2018-07-06T16:35:48.655393+00:00 app[web.1]: true
-2018-07-06T16:35:48.658823+00:00 app[web.1]: 0.143369175627
-2018-07-06T16:35:48.657238+00:00 app[web.1]: 0.264285714286
-2018-07-06T16:35:48.661279+00:00 app[web.1]: 0.214285714286
-2018-07-06T16:35:48.663074+00:00 app[web.1]: 0.242857142857
-2018-07-06T16:35:48.664204+00:00 app[web.1]: 0.214285714286
-2018-07-06T16:35:48.665551+00:00 app[web.1]: 0.307142857143
-2018-07-06T16:35:48.667104+00:00 app[web.1]: 0.207142857143
-2018-07-06T16:35:48.667111+00:00 app[web.1]: true
-2018-07-06T16:35:48.669150+00:00 app[web.1]: 0.31541218638
-2018-07-06T16:35:48.670271+00:00 app[web.1]: 0.179856115108
-2018-07-06T16:35:48.673919+00:00 app[web.1]: 0.243727598566
-2018-07-06T16:35:48.672321+00:00 app[web.1]: 0.344086021505
-2018-07-06T16:35:48.675475+00:00 app[web.1]: 0.258064516129
-2018-07-06T16:35:48.677390+00:00 app[web.1]: 0.351254480287
-2018-07-06T16:35:48.678676+00:00 app[web.1]: 0.215053763441
-2018-07-06T16:35:48.679751+00:00 app[web.1]: 0.258064516129
-2018-07-06T16:35:48.679754+00:00 app[web.1]: true
-2018-07-06T16:35:48.681411+00:00 app[web.1]: 0.291666666667
-2018-07-06T16:35:48.682588+00:00 app[web.1]: 0.236933797909
-2018-07-06T16:35:48.683808+00:00 app[web.1]: 0.236111111111
-2018-07-06T16:35:48.686773+00:00 app[web.1]: 0.256944444444
-2018-07-06T16:35:48.685066+00:00 app[web.1]: 0.215277777778
-2018-07-06T16:35:48.688210+00:00 app[web.1]: 0.229166666667
-2018-07-06T16:35:48.689491+00:00 app[web.1]: 0.208333333333
-2018-07-06T16:35:48.690845+00:00 app[web.1]: 0.381944444444
-2018-07-06T16:35:48.692105+00:00 app[web.1]: 0.250871080139
-2018-07-06T16:35:48.692107+00:00 app[web.1]: true
-2018-07-06T16:35:48.693488+00:00 app[web.1]: 0.356846473029
-2018-07-06T16:35:48.693492+00:00 app[web.1]: true
-2018-07-06T16:35:48.694410+00:00 app[web.1]: 0.239316239316
-2018-07-06T16:35:48.694908+00:00 app[web.1]: 0.218009478673
-2018-07-06T16:35:48.694914+00:00 app[web.1]: true
-2018-07-06T16:35:48.697041+00:00 app[web.1]: 0.211678832117
-2018-07-06T16:35:48.698408+00:00 app[web.1]: 0.143426294821
-2018-07-06T16:35:48.700481+00:00 app[web.1]: 0.27868852459
-2018-07-06T16:35:48.700484+00:00 app[web.1]: true
-2018-07-06T16:35:48.702405+00:00 app[web.1]: 0.308823529412
-2018-07-06T16:35:48.703176+00:00 app[web.1]: 0.265060240964
-2018-07-06T16:35:48.704626+00:00 app[web.1]: 0.247933884298
-2018-07-06T16:35:48.705415+00:00 app[web.1]: 0.141843971631
-2018-07-06T16:35:48.707323+00:00 app[web.1]: 0.272058823529
-2018-07-06T16:35:48.705418+00:00 app[web.1]: true
-2018-07-06T16:35:48.708136+00:00 app[web.1]: 0.273092369478
-2018-07-06T16:35:48.708930+00:00 app[web.1]: 0.157024793388
-2018-07-06T16:35:48.710023+00:00 app[web.1]: 0.248226950355
-2018-07-06T16:35:48.711590+00:00 app[web.1]: 0.278571428571
-2018-07-06T16:35:48.711592+00:00 app[web.1]: true
-2018-07-06T16:35:48.712336+00:00 app[web.1]: 0.2995951417
-2018-07-06T16:35:48.712982+00:00 app[web.1]: 0.25
-2018-07-06T16:35:48.714064+00:00 app[web.1]: 0.175115207373
-2018-07-06T16:35:48.715939+00:00 app[web.1]: 0.20233463035
-2018-07-06T16:35:48.717447+00:00 app[web.1]: 0.266666666667
-2018-07-06T16:35:48.718356+00:00 app[web.1]: 0.227450980392
-2018-07-06T16:35:48.718361+00:00 app[web.1]: true
-2018-07-06T16:35:48.719685+00:00 app[web.1]: 0.294339622642
-2018-07-06T16:35:48.721340+00:00 app[web.1]: 0.190082644628
-2018-07-06T16:35:48.722541+00:00 app[web.1]: 0.221276595745
-2018-07-06T16:35:48.724211+00:00 app[web.1]: 0.174545454545
-2018-07-06T16:35:48.725180+00:00 app[web.1]: 0.234432234432
-2018-07-06T16:35:48.726878+00:00 app[web.1]: 0.21978021978
-2018-07-06T16:35:48.727908+00:00 app[web.1]: 0.193548387097
-2018-07-06T16:35:48.727910+00:00 app[web.1]: true
-2018-07-06T16:35:48.729488+00:00 app[web.1]: 0.198529411765
-2018-07-06T16:35:48.730639+00:00 app[web.1]: 0.136546184739
-2018-07-06T16:35:48.731480+00:00 app[web.1]: 0.256198347107
-2018-07-06T16:35:48.732923+00:00 app[web.1]: 0.333333333333
-2018-07-06T16:35:48.734156+00:00 app[web.1]: 0.257142857143
-2018-07-06T16:35:48.735258+00:00 app[web.1]: 0.235714285714
-2018-07-06T16:35:48.736412+00:00 app[web.1]: 0.250980392157
-2018-07-06T16:35:48.737312+00:00 app[web.1]: 0.212454212454
-2018-07-06T16:35:48.737314+00:00 app[web.1]: true
-2018-07-06T16:35:48.738363+00:00 app[web.1]: 0.25
-2018-07-06T16:35:48.739063+00:00 app[web.1]: 0.160642570281
-2018-07-06T16:35:48.739955+00:00 app[web.1]: 0.280991735537
-2018-07-06T16:35:48.741187+00:00 app[web.1]: 0.262411347518
-2018-07-06T16:35:48.742322+00:00 app[web.1]: 0.221428571429
-2018-07-06T16:35:48.743571+00:00 app[web.1]: 0.335714285714
-2018-07-06T16:35:48.744356+00:00 app[web.1]: 0.156862745098
-2018-07-06T16:35:48.745512+00:00 app[web.1]: 0.197802197802
-2018-07-06T16:35:48.746889+00:00 app[web.1]: 0.342857142857
-2018-07-06T16:35:48.746892+00:00 app[web.1]: true
+2018-07-06T16:45:04.603629+00:00 app[web.1]: worker.init_process()
+2018-07-06T16:45:04.603630+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2018-07-06T16:45:04.603632+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2018-07-06T16:45:04.603633+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-07-06T16:45:04.603635+00:00 app[web.1]: self.callable = self.load()
+2018-07-06T16:45:04.603642+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-07-06T16:45:04.603643+00:00 app[web.1]: return self.load_wsgiapp()
+2018-07-06T16:45:04.603644+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-07-06T16:45:04.603646+00:00 app[web.1]: return util.import_app(self.app_uri)
+2018-07-06T16:45:04.603647+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2018-07-06T16:45:04.603649+00:00 app[web.1]: __import__(module)
+2018-07-06T16:45:04.603650+00:00 app[web.1]: File "/app/app.py", line 98
+2018-07-06T16:45:04.603652+00:00 app[web.1]: tweet_full = tweet.full_text
+2018-07-06T16:45:04.603653+00:00 app[web.1]: ^
+2018-07-06T16:45:04.603655+00:00 app[web.1]: IndentationError: unexpected indent
+2018-07-06T16:45:04.603847+00:00 app[web.1]: [2018-07-06 16:45:04 +0000] [11] [INFO] Worker exiting (pid: 11)
+2018-07-06T16:45:13.094006+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [4] [INFO] Starting gunicorn 19.3.0
+2018-07-06T16:45:13.094660+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [4] [INFO] Listening at: http://0.0.0.0:36814 (4)
+2018-07-06T16:45:13.094808+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [4] [INFO] Using worker: sync
+2018-07-06T16:45:13.102132+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [10] [INFO] Booting worker with pid: 10
+2018-07-06T16:45:13.116629+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [10] [ERROR] Exception in worker process:
+2018-07-06T16:45:13.116633+00:00 app[web.1]: Traceback (most recent call last):
+2018-07-06T16:45:13.116637+00:00 app[web.1]: worker.init_process()
+2018-07-06T16:45:13.116635+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2018-07-06T16:45:13.116638+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2018-07-06T16:45:13.116640+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2018-07-06T16:45:13.116642+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-07-06T16:45:13.116643+00:00 app[web.1]: self.callable = self.load()
+2018-07-06T16:45:13.116645+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-07-06T16:45:13.116647+00:00 app[web.1]: return self.load_wsgiapp()
+2018-07-06T16:45:13.116649+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-07-06T16:45:13.116650+00:00 app[web.1]: return util.import_app(self.app_uri)
+2018-07-06T16:45:13.116652+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2018-07-06T16:45:13.116654+00:00 app[web.1]: __import__(module)
+2018-07-06T16:45:13.116656+00:00 app[web.1]: File "/app/app.py", line 98
+2018-07-06T16:45:13.116657+00:00 app[web.1]: tweet_full = tweet.full_text
+2018-07-06T16:45:13.116659+00:00 app[web.1]: ^
+2018-07-06T16:45:13.116661+00:00 app[web.1]: IndentationError: unexpected indent
+2018-07-06T16:45:13.116662+00:00 app[web.1]: Traceback (most recent call last):
+2018-07-06T16:45:13.116664+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2018-07-06T16:45:13.116671+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-07-06T16:45:13.116669+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2018-07-06T16:45:13.116666+00:00 app[web.1]: worker.init_process()
+2018-07-06T16:45:13.116674+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-07-06T16:45:13.116668+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2018-07-06T16:45:13.116673+00:00 app[web.1]: self.callable = self.load()
+2018-07-06T16:45:13.116676+00:00 app[web.1]: return self.load_wsgiapp()
+2018-07-06T16:45:13.116678+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-07-06T16:45:13.116679+00:00 app[web.1]: return util.import_app(self.app_uri)
+2018-07-06T16:45:13.116681+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2018-07-06T16:45:13.116683+00:00 app[web.1]: __import__(module)
+2018-07-06T16:45:13.116684+00:00 app[web.1]: File "/app/app.py", line 98
+2018-07-06T16:45:13.116686+00:00 app[web.1]: tweet_full = tweet.full_text
+2018-07-06T16:45:13.116688+00:00 app[web.1]: ^
+2018-07-06T16:45:13.116689+00:00 app[web.1]: IndentationError: unexpected indent
+2018-07-06T16:45:13.154437+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [11] [INFO] Booting worker with pid: 11
+2018-07-06T16:45:13.116769+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [10] [INFO] Worker exiting (pid: 10)
+2018-07-06T16:45:13.164571+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [11] [ERROR] Exception in worker process:
+2018-07-06T16:45:13.164575+00:00 app[web.1]: Traceback (most recent call last):
+2018-07-06T16:45:13.164581+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2018-07-06T16:45:13.164582+00:00 app[web.1]: worker.init_process()
+2018-07-06T16:45:13.164584+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2018-07-06T16:45:13.164586+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2018-07-06T16:45:13.164588+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-07-06T16:45:13.164589+00:00 app[web.1]: self.callable = self.load()
+2018-07-06T16:45:13.164591+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-07-06T16:45:13.164593+00:00 app[web.1]: return self.load_wsgiapp()
+2018-07-06T16:45:13.164595+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-07-06T16:45:13.164596+00:00 app[web.1]: return util.import_app(self.app_uri)
+2018-07-06T16:45:13.164598+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2018-07-06T16:45:13.164600+00:00 app[web.1]: __import__(module)
+2018-07-06T16:45:13.164602+00:00 app[web.1]: File "/app/app.py", line 98
+2018-07-06T16:45:13.164603+00:00 app[web.1]: tweet_full = tweet.full_text
+2018-07-06T16:45:13.164607+00:00 app[web.1]: IndentationError: unexpected indent
+2018-07-06T16:45:13.164605+00:00 app[web.1]: ^
+2018-07-06T16:45:13.164608+00:00 app[web.1]: Traceback (most recent call last):
+2018-07-06T16:45:13.164610+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2018-07-06T16:45:13.164612+00:00 app[web.1]: worker.init_process()
+2018-07-06T16:45:13.164614+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2018-07-06T16:45:13.164615+00:00 app[web.1]: self.wsgi = self.app.wsgi()
+2018-07-06T16:45:13.164617+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-07-06T16:45:13.164619+00:00 app[web.1]: self.callable = self.load()
+2018-07-06T16:45:13.164620+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-07-06T16:45:13.164622+00:00 app[web.1]: return self.load_wsgiapp()
+2018-07-06T16:45:13.164624+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-07-06T16:45:13.164625+00:00 app[web.1]: return util.import_app(self.app_uri)
+2018-07-06T16:45:13.164627+00:00 app[web.1]: File "/app/.heroku/python/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+2018-07-06T16:45:13.164630+00:00 app[web.1]: File "/app/app.py", line 98
+2018-07-06T16:45:13.164629+00:00 app[web.1]: __import__(module)
+2018-07-06T16:45:13.164632+00:00 app[web.1]: tweet_full = tweet.full_text
+2018-07-06T16:45:13.164634+00:00 app[web.1]: ^
+2018-07-06T16:45:13.164636+00:00 app[web.1]: IndentationError: unexpected indent
+2018-07-06T16:45:13.164809+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [11] [INFO] Worker exiting (pid: 11)
+2018-07-06T16:45:13.190120+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [4] [INFO] Shutting down: Master
+2018-07-06T16:45:13.190289+00:00 app[web.1]: [2018-07-06 16:45:13 +0000] [4] [INFO] Reason: Worker failed to boot.
