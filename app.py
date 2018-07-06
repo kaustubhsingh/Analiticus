@@ -81,7 +81,7 @@ def home():
         max_tweets = 200
         
         try:
-            searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en', tweet_mode='extended').items(max_tweets)]
+            searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en').items(max_tweets)]
                 
             #print dir(searched_tweets[0])
             pos_score = 0
@@ -96,7 +96,7 @@ def home():
                 #viewlist.append(len(tweet.text))
                 
                 #score = 1
-                score = sentiment.tweet_score(tweet.full_text)
+                score = sentiment.tweet_score(tweet.text)
                 if score > 0.01:
                     pos_score += 1
                 elif score < -0.01:
@@ -104,7 +104,7 @@ def home():
                 else:
                     neu_score += 1
                 
-                g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.full_text, tweet.user.location, score])      
+                g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet.text, tweet.user.location, score])      
             
 
             # Save sentiment data for visualization
