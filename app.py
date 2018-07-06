@@ -20,6 +20,7 @@ import similar
 from flask_mail import Mail, Message
 
 #import logging
+import sys
 
 app = Flask(__name__)
 
@@ -89,6 +90,8 @@ def home():
             
             for tweet in searched_tweets:      
                 print tweet.text.encode('utf-8')
+                sys.stdout.flush()
+                
                 viewlist.append(tweet.text)
                 
                 #score = 1
