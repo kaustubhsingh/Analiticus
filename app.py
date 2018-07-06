@@ -92,7 +92,8 @@ def home():
                 print tweet.text.encode('utf-8')
                 sys.stdout.flush()
                 
-                viewlist.append(tweet.text)
+                #viewlist.append(tweet.text)
+                viewlist.append(len(tweet.text))
                 
                 #score = 1
                 score = sentiment.tweet_score(tweet.text)
