@@ -92,7 +92,10 @@ def home():
                 
                 print dir(tweet)
                 
-                tweet_full = tweet.full_text
+                if "retweeted_status" in dir(tweet):
+                	tweet_full = tweet.retweeted_status.full_text
+                else:
+                	tweet_full = tweet.full_text
                 	
                 viewlist.append(tweet_full)
                 #viewlist.append(len(tweet.text))
