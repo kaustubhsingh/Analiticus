@@ -88,7 +88,7 @@ def home():
             neu_score = 0
             
             for tweet in searched_tweets:      
-                #print tweet.text.encode('utf-8')
+                print tweet.text.encode('utf-8')
                 viewlist.append(tweet.text)
                 
                 #score = 1
