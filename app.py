@@ -103,7 +103,7 @@ def home():
                     pos_score += 1
                 elif score < -0.2:
                     neg_score += 1
-                elif: score > -0.01 and score < 0.01
+                else:
                     neu_score += 1
                 
                 g.db.execute("INSERT INTO tweets VALUES (?, ?, ?)", [tweet_full, tweet.user.location, score])      
