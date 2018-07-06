@@ -78,7 +78,7 @@ def home():
         api = tweepy.API(auth)
   
         query = keyword
-        max_tweets = 500
+        max_tweets = 300
         
         try:
             searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en', tweet_mode='extended').items(max_tweets)]
