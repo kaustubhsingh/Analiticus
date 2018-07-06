@@ -78,7 +78,7 @@ def home():
         api = tweepy.API(auth)
   
         query = keyword
-        max_tweets = 200
+        max_tweets = 500
         
         try:
             searched_tweets = [status for status in tweepy.Cursor(api.search, q=query, lang='en', tweet_mode='extended').items(max_tweets)]
@@ -121,7 +121,7 @@ def home():
             #print json.dumps(donut_chart_data)
             
             # most positive tweets
-            positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score > 0.01 ORDER BY score DESC LIMIT 50")
+            positive_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score > 0.2 ORDER BY score DESC LIMIT 50")
             pos_count = 0
             for row in positive_tweets_data:
                 #print row
@@ -132,7 +132,7 @@ def home():
                         pos_count +=1
     
             # most negative tweets
-            negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score < -0.01 ORDER BY score ASC LIMIT 50")
+            negative_tweets_data = g.db.execute("SELECT tweet, location FROM tweets WHERE score < -0.2 ORDER BY score ASC LIMIT 50")
             neg_count = 0
             for row in negative_tweets_data:
                 #print row
