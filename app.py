@@ -88,10 +88,11 @@ def home():
             neg_score = 0
             neu_score = 0
             
-            for tweet in searched_tweets:      
-                print tweet.text.encode('utf-8')
-                sys.stdout.flush()
+            for tweet in searched_tweets:                     
                 
+                if len(tweet.text) > 140:
+                	tweet.text = extended_tweet['full_text']
+                	
                 viewlist.append(tweet.text)
                 #viewlist.append(len(tweet.text))
                 
